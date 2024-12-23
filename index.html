@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time</title>
+</head>
+<body>
+    <h1>Check Date & Time</h1>
+    <button onclick="check()">Check</button>
+    <div id="print"></div>
+    
+    <script>
+     function check(){
+        setInterval(function(){
+        let currentDate = new Date() ;
+        let monthArr = ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"];
+     let date = currentDate.getDate() ;
+     let month = monthArr[currentDate.getMonth()] ;
+     let year = currentDate.getFullYear() ;
+     let hour = currentDate.getHours() ;
+     let min = currentDate.getMinutes() ;
+     let sec = currentDate.getSeconds() ;
+     let fullYear = `${date}-${month}-${year} ${hour}: ${min} :${sec} `
+     document.getElementById("print").innerText = fullYear ;
+     },1000)
+     }
+
+    
+    
+    </script>
+</body>
+</html>
